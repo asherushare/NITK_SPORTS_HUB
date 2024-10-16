@@ -1,0 +1,13 @@
+/* Contact.css */
+html {
+  scroll-behavior: smooth;
+}
+
+input, textarea {
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #7f9cf5;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
+}

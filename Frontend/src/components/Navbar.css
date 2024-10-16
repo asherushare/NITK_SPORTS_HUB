@@ -1,0 +1,14 @@
+.navbar-end .custom-btn{
+  background-color: #c30909;
+  color: white;
+  border: none;
+}
+
+.navbar-end .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* .navbar-start .nitk-title:hover {
+    background-color: white;
+} */

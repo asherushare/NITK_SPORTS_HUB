@@ -1,0 +1,58 @@
+.freq-ask-main {
+    background-color: #9bcc1f;
+}
+
+.freq-div {
+  color: black;
+}
+
+.faq {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.faq-item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background-color: #b3e240;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #9bcc1f;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: #fff;
+  color: black;
+  display: none;
+  border-radius: 0 0 10px 10px;
+  border-top: 2px solid #b3e240;
+}
+
+.faq-answer p {
+  margin: 0;
+}

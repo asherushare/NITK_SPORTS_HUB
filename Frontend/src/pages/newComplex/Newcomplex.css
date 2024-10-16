@@ -1,0 +1,57 @@
+.new-complex-container {
+  animation: fadeIn 1.5s ease-in;
+  padding: 20px;
+}
+
+.card-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-complex-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.new-complex-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.card-body p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card-actions .btn-primary {
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.card-actions .btn-primary:hover {
+  background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
