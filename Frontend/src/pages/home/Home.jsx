@@ -1,7 +1,7 @@
-import './Home.css'
-import Navbar from '../../components/Navbar'
-import Faq from '../../components/Faq'
-import Footer from '../../components/Footer';
+import Navbar from "../../components/Navbar";
+import Faq from "../../components/Faq";
+import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -10,131 +10,148 @@ function Home() {
         <Navbar />
       </div>
 
-      <div>
-        <section
-          className="hero h-screen bg-cover bg-center relative flex items-center justify-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1517495306984-57619c8ad8dc')`,
-          }}
-        >
-          <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4 animate-pulse">
-              Welcome to Sports Club
-            </h1>
-            <p className="text-lg mb-8">
-              Explore, Join, and Compete in a variety of sports at our college.
-            </p>
-            <button className="btn btn-primary">Explore Events</button>
-          </div>
-        </section>
+      {/* Hero Section */}
+      <section
+        className="hero h-screen bg-cover bg-center relative flex items-center justify-center"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1517495306984-57619c8ad8dc')`,
+        }}
+      >
+        <div className="text-center text-white">
+          <h1 className="text-6xl font-extrabold mb-4 animate-bounce">
+            Welcome to Sports Club
+          </h1>
+          <p className="text-lg mb-8 animate-fade-in">
+            Explore, Join, and Compete in a variety of sports at our college.
+          </p>
+          <Link to="/more-events">
+            <button className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-transform transform hover:scale-105">
+              Explore Events
+            </button>
+          </Link>
+        </div>
+      </section>
 
-        <section className="py-16 bg-gray-100">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Why Choose Us
-            </h2>
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="feature-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg">
-                <div className="icon text-6xl mb-4 text-blue-500">⚽</div>
-                <h3 className="text-2xl font-semibold mb-2">
-                  Wide Variety of Sports
-                </h3>
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Why Choose Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="feature-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all">
+              <div className="icon text-6xl mb-4 text-blue-500">⚽</div>
+              <h3 className="text-2xl font-semibold mb-2">
+                Wide Variety of Sports
+              </h3>
+              <p className="text-gray-600">
+                Choose from football, basketball, badminton, and more.
+              </p>
+            </div>
+            <div className="feature-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all">
+              <div className="icon text-6xl mb-4 text-blue-500">🏆</div>
+              <h3 className="text-2xl font-semibold mb-2">
+                Competitive Events
+              </h3>
+              <p className="text-gray-600">
+                Join exciting sports events with great prizes.
+              </p>
+            </div>
+            <div className="feature-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all">
+              <div className="icon text-6xl mb-4 text-blue-500">🎉</div>
+              <h3 className="text-2xl font-semibold mb-2">Fun and Community</h3>
+              <p className="text-gray-600">
+                Be part of a thriving sports community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Featured Sports Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Our Featured Sports
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="sport-card bg-white shadow-lg overflow-hidden rounded-lg transform hover:scale-105 transition-transform">
+              <img
+                src="https://images.unsplash.com/photo-1600250395178-40fe752e5189?q=80&w=1931&auto=format&fit=crop"
+                className="w-full h-48 object-cover"
+                alt="Football"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Football</h3>
                 <p className="text-gray-600">
-                  Choose from a wide range of sports like football, basketball,
-                  badminton, and more.
+                  Join the football team and compete in tournaments.
                 </p>
               </div>
-              <div className="feature-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg">
-                <div className="icon text-6xl mb-4 text-blue-500">🏆</div>
-                <h3 className="text-2xl font-semibold mb-2">
-                  Competitive Events
-                </h3>
+            </div>
+            <div className="sport-card bg-white shadow-lg overflow-hidden rounded-lg transform hover:scale-105 transition-transform">
+              <img
+                src="https://images.unsplash.com/photo-1518614368389-5160c0b0de72?q=80&w=2000&auto=format&fit=crop"
+                className="w-full h-48 object-cover"
+                alt="Basketball"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Basketball</h3>
                 <p className="text-gray-600">
-                  Join the most exciting and competitive sports events with
-                  great prizes.
+                  Represent our college in basketball events.
                 </p>
               </div>
-              <div className="feature-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg">
-                <div className="icon text-6xl mb-4 text-blue-500">🎉</div>
-                <h3 className="text-2xl font-semibold mb-2">
-                  Fun and Community
-                </h3>
+            </div>
+            <div className="sport-card bg-white shadow-lg overflow-hidden rounded-lg transform hover:scale-105 transition-transform">
+              <img
+                src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                className="w-full h-48 object-cover"
+                alt="Basketball"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Cycle race</h3>
                 <p className="text-gray-600">
-                  Be part of a thriving community of athletes and sports
-                  enthusiasts.
+                  Represent our college in basketball events.
+                </p>
+              </div>
+            </div>
+            <div className="sport-card bg-white shadow-lg overflow-hidden rounded-lg transform hover:scale-105 transition-transform">
+              <img
+                src="https://images.unsplash.com/photo-1718452739586-5b467f1f109b?q=80&w=2069&auto=format&fit=crop"
+                className="w-full h-48 object-cover"
+                alt="Badminton"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Badminton</h3>
+                <p className="text-gray-600">
+                  Smash your way to the top in our tournaments.
                 </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Our Featured Sports
-            </h2>
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="sport-card w-full md:w-1/3 lg:w-1/4 bg-white shadow-lg overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1600250395178-40fe752e5189?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2">Football</h3>
-                  <p className="text-gray-600">
-                    Join the football team and compete in inter-college
-                    tournaments.
-                  </p>
-                </div>
-              </div>
+      {/* CTA Section */}
+      <section className="cta py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-5xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="mb-8">
+            Join our sports club today and be part of the action!
+          </p>
+          <Link to="/signup">
+            <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-transform transform hover:scale-105">
+              Sign Up Now
+            </button>
+          </Link>
+        </div>
+      </section>
 
-              <div className="sport-card w-full md:w-1/3 lg:w-1/4 bg-white shadow-lg overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1518614368389-5160c0b0de72?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2">Basketball</h3>
-                  <p className="text-gray-600">
-                    Shoot hoops and represent our college in basketball events.
-                  </p>
-                </div>
-              </div>
-
-              <div className="sport-card w-full md:w-1/3 lg:w-1/4 bg-white shadow-lg overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1718452739586-5b467f1f109b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Badminton"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2">Badminton</h3>
-                  <p className="text-gray-600">
-                    Smash your way to the top in our badminton tournaments.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="cta py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-white mb-8">
-              Join our sports club today and be part of the action!
-            </p>
-            <button className="btn btn-primary">Sign Up Now</button>
-          </div>
-        </section>
-      </div>
-
+      {/* FAQ Section */}
       <div className="FAQ">
         <Faq />
       </div>
 
+      {/* Footer Section */}
       <div className="home-footer">
         <Footer />
       </div>
@@ -142,4 +159,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;
