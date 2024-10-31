@@ -5,7 +5,7 @@ import Loginhere from "./Loginhere";
 function Navbar() {
   return (
     <div>
-      <div className="navbar">
+      <div className="navbar nab">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +26,7 @@ function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
             >
               <li>
                 <Link to="/contact">Contact Us</Link>
@@ -39,12 +39,12 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl">
-            NITK SPORTS HUB
+          <Link to="/" className="btn btn-ghost text-xl text-white">
+            <span className="text-yellow-500">NITK</span>SPORTS HUB
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-white">
             <li>
               <Link to="/contact">Contact Us</Link>
             </li>
@@ -57,7 +57,10 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn custom-btn" onClick={() => document.getElementById('my_modal_3').showModal()}>
+          <a
+            className="btn custom-btn"
+            onClick={() => document.getElementById("my_modal_3").showModal()}
+          >
             JOIN TO PLAY
           </a>
           <Loginhere />

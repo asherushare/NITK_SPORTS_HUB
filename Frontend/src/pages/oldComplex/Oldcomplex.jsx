@@ -19,7 +19,7 @@ function Newcomplex() {
                 />
               </figure>
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">Cricket</h2>
+                <h2 className="text-2xl font-bold mb-3 text-black">Cricket</h2>
                 <p className="text-gray-700 mb-4">
                   Exciting and fast-paced indoor sport. Join us for a match!
                 </p>
@@ -45,7 +45,7 @@ function Newcomplex() {
                 />
               </figure>
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">Football</h2>
+                <h2 className="text-2xl font-bold mb-3 text-black">Football</h2>
                 <p className="text-gray-700 mb-4">
                   Test your skills and reflexes with a game of football!
                 </p>
@@ -71,7 +71,7 @@ function Newcomplex() {
                 />
               </figure>
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">Rugby</h2>
+                <h2 className="text-2xl font-bold mb-3 text-black">Rugby</h2>
                 <p className="text-gray-700 mb-4">
                   Relax with a classic game of carrom!
                 </p>
@@ -97,7 +97,9 @@ function Newcomplex() {
                 />
               </figure>
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">Volleyball</h2>
+                <h2 className="text-2xl font-bold mb-3 text-black">
+                  Volleyball
+                </h2>
                 <p className="text-gray-700 mb-4">
                   Sharpen your mind with a game of strategy and intellect.
                 </p>
